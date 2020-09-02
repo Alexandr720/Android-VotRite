@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical"
+    android:id="@+id/ll_prop">
+
+    <TextView
+        android:id="@+id/tv_prop_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_prop_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/proposition_title"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_prop_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/votAgainst"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:checked="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:text="@string/against"
+            android:background="@drawable/radio_flat_selector"
+            android:textColor="@drawable/radio_flat_text_selector"
+            android:layout_weight="1"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/votFor"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:button="@android:color/transparent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:text="@string/vote_for"
+            android:layout_weight="1"
+            android:background="@drawable/radio_flat_selector"
+            android:textColor="@drawable/radio_flat_text_selector"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

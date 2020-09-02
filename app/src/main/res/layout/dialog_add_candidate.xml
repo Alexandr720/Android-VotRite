@@ -1,0 +1,72 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog"
+    android:orientation="vertical"
+    android:id="@+id/alertDialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/x"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="7"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/add_candidate_name"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="25dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etNewCandidate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/enter_candidate_name"
+        android:textColorHint="@color/colorHint"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="16sp"
+        android:background="@color/colorWhite"
+        android:autofillHints="" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#D5D2D6" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@string/save"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:textAllCaps="false"
+        android:background="@drawable/round_button_blue"
+        android:textColor="@drawable/style_reset_cast_button"/>
+</LinearLayout>

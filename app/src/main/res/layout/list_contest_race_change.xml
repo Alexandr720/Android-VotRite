@@ -1,0 +1,73 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:id="@+id/item_candidate_race_change">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/candidateRace"
+            android:layout_width="36dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/candidateName"
+            android:layout_toEndOf="@+id/candidateRace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="80dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/plusRace"
+                android:layout_width="36dp"
+                android:layout_height="50dp"
+                android:text="@string/plus"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/minusRace"
+                android:layout_toEndOf="@+id/plusRace"
+                android:layout_width="36dp"
+                android:layout_height="50dp"
+                android:text="@string/minus"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginStart="3dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

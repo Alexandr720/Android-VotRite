@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="5dp"
+                android:text="@string/go_back"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/contest"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnHelp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_help"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_language"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-90dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/shadow_borders">
+
+        <TextView
+            android:id="@+id/ballot_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_min_vote"
+            android:layout_below="@+id/ballot_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:ignore="NotSibling">
+
+            <TextView
+                android:id="@+id/tvLess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/less_than"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvLessNum"
+                android:layout_toEndOf="@id/tvLess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_toEndOf="@id/tvLessNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_blank"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_max_vote"
+            android:layout_below="@+id/rl_min_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            tools:ignore="NotSibling">
+            <TextView
+                android:id="@+id/tvMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_than"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvMoreNum"
+                android:layout_toEndOf="@id/tvMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_toEndOf="@id/tvMoreNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_blank"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_party"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_max_vote"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="76dp">
+
+            <ListView
+                android:id="@+id/lv_candidate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:divider="@color/colorWhite"
+                android:fadeScrollbars="false"
+                android:scrollbarStyle="outsideOverlay"
+                tools:listitem="@layout/list_contest" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_SomeoneElse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="22dp"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_border_button"
+                android:textAllCaps="false"
+                android:textColor="@drawable/style_dialog_text"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/btnSomeoneElse"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_border_button"
+                android:text="@string/someone_else"
+                android:textAllCaps="false"
+                android:textColor="@drawable/style_dialog_text"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/background_oval_blue"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_next"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</LinearLayout>

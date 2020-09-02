@@ -1,0 +1,70 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog"
+    android:orientation="vertical"
+    android:id="@+id/alertDialog">
+
+    <TextView
+        android:id="@+id/alertTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/alertMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_select_the_party"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textAllCaps="false"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#D5D2D6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnNO"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no"
+            android:textSize="18sp"
+            android:textColor="@drawable/style_dialog_text"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/btnOK"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/yes"
+            android:textSize="18sp"
+            android:textColor="@drawable/style_dialog_text"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>
